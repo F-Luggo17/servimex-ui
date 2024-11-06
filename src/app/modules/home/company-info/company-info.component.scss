@@ -1,0 +1,72 @@
+// @mixin dynamic-bg($start-color, $end-color) {
+//   @keyframes dynamic-bg {
+//     0% {
+//       background-color: #{$start-color};
+//     }
+//     50% {
+//       background-color: #{$end-color};
+//     }
+//     100% {
+//       background-color: #{$start-color};
+//     }
+//   }
+// }
+
+@mixin glowing-bg($color1, $color2, $animationName) {
+  animation: #{$animationName} 2s linear infinite;
+  background: $color1;
+
+  @keyframes #{$animationName} {
+    0% {
+      background: #{$color1};
+    }
+    50% {
+      background: #{$color2};
+    }
+    100% {
+      background: #{$color1};
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-text {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+.custom-border-green {
+  justify-content: center;
+  display: flex;
+  border-radius: 0.5rem;
+  @include glowing-bg(rgb(60, 255, 0), rgb(32, 123, 4), "glowing-green");
+  background-repeat: no-repeat;
+}
+
+.custom-border-orange {
+  justify-content: center;
+  display: flex;
+  border-radius: 0.5rem;
+  @include glowing-bg(rgb(130, 73, 0), rgb(255, 188, 5), "glowing-orange");
+  background-repeat: no-repeat;
+}
+
+.custom-border-blue {
+  justify-content: center;
+  display: flex;
+  border-radius: 0.5rem;
+  @include glowing-bg(rgb(0, 157, 255), rgb(4, 20, 123), "glowing-blue");
+  background-repeat: no-repeat;
+}
+
+.custom-margin {
+  margin: 0.17rem;
+}

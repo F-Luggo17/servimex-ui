@@ -1,0 +1,12 @@
+.item {
+    z-index: 3;
+    transition: transform 0.3s;
+    transition-timing-function: ease;
+    margin: 1rem!important;
+}
+
+.item:hover {
+    transform: scale(1.25);
+    z-index: 4;
+    margin: 0px!important;
+}

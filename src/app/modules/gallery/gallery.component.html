@@ -1,0 +1,68 @@
+<div class="d-flex gallery-margins card bg-dark text-bg-dark">
+    <div class="row">
+        <div class="col-12">
+            <h1>Galeria</h1>
+            <h6>Descubre nuestros proyectos y elige el estilo perfecto para ti.</h6>
+        </div>
+    </div>
+    <div class="row px-3 py-5">
+        <div class="col-12">
+            <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-canceles-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-canceles" type="button" role="tab" aria-controls="pills-canceles"
+                        aria-selected="true">Canceles</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-ventanas-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-ventanas" type="button" role="tab" aria-controls="pills-ventanas"
+                        aria-selected="false">Ventanas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-barandales-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-barandales" type="button" role="tab" aria-controls="pills-barandales"
+                        aria-selected="false">Barandales</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-escaleras-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-escaleras" type="button" role="tab" aria-controls="pills-escaleras"
+                        aria-selected="false">Escaleras</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-canceles" role="tabpanel"
+                    aria-labelledby="pills-canceles-tab" tabindex="0">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3" *ngFor="let item of items">
+                            <app-item-card></app-item-card>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-ventanas" role="tabpanel" aria-labelledby="pills-ventanas-tab"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3" *ngFor="let item of items">
+                            <app-item-card></app-item-card>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-barandales" role="tabpanel" aria-labelledby="pills-barandales-tab"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3" *ngFor="let item of items">
+                            <app-item-card></app-item-card>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-escaleras" role="tabpanel" aria-labelledby="pills-escaleras-tab"
+                    tabindex="0">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3" *ngFor="let item of items">
+                            <app-item-card></app-item-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
